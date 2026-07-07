@@ -30,6 +30,8 @@
       --accent3: #2ed573;
       --ai-accent: #1e90ff;
       --ai-accent2: #00d2d3;
+      --nanpin-accent: #b8860b;
+      --nanpin-accent2: #ffd700;
       --font: 'WorkSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
       --max: 960px;
     }
@@ -147,6 +149,8 @@
     .category-btn:hover { border-color: var(--accent); color: var(--accent); }
     .category-btn.active.drama { background: var(--accent); color: white; border-color: var(--accent); }
     .category-btn.active.ai { background: var(--ai-accent); color: white; border-color: var(--ai-accent); }
+    .category-btn.active.nanpin { background: var(--nanpin-accent); color: white; border-color: var(--nanpin-accent); }
+    .category-btn.nanpin:hover { border-color: var(--nanpin-accent); color: var(--nanpin-accent); }
 
     /* Tab switcher (sub: 热播 / 飙升) */
     .tab-switcher {
@@ -194,12 +198,14 @@
     }
     h2 .icon { font-size: 1.3rem; }
     h2.ai-theme { border-bottom-color: var(--ai-accent); }
+    h2.nanpin-theme { border-bottom-color: var(--nanpin-accent); }
 
     /* Stats */
     .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
     .stat-card { background: var(--bg2); border-radius: 12px; padding: 1.5rem; text-align: center; border: 1px solid var(--rule); }
     .stat-number { font-size: 2rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem; }
     .stat-number.ai { color: var(--ai-accent); }
+    .stat-number.nanpin { color: var(--nanpin-accent); }
     .stat-label { font-size: 0.9rem; color: var(--muted); }
 
     /* Hot list with embedded analysis */
@@ -211,6 +217,7 @@
     }
     .hot-item:hover { border-color: var(--accent); }
     .hot-item.ai:hover { border-color: var(--ai-accent); }
+    .hot-item.nanpin:hover { border-color: var(--nanpin-accent); }
     .hot-main {
       padding: 1.25rem;
       display: flex; align-items: center; gap: 1rem;
@@ -295,10 +302,20 @@
     .hot-item.stable-item.ai {
       border-left-color: var(--ai-accent2);
     }
+    .hot-item.new-item.nanpin {
+      border-left-color: var(--nanpin-accent2);
+    }
+    .hot-item.retain-item.nanpin {
+      border-left-color: var(--nanpin-accent);
+    }
+    .hot-item.stable-item.nanpin {
+      border-left-color: var(--nanpin-accent2);
+    }
     .hot-meta { font-size: 0.85rem; color: var(--muted); display: flex; gap: 1rem; flex-wrap: wrap; }
     .hot-heat { text-align: right; flex-shrink: 0; }
     .heat-value { font-size: 1.3rem; font-weight: 700; color: var(--accent); }
     .heat-value.ai { color: var(--ai-accent); }
+    .heat-value.nanpin { color: var(--nanpin-accent); }
     .heat-label { font-size: 0.75rem; color: var(--muted); }
 
     /* Embedded analysis */
@@ -323,8 +340,10 @@
     @media (max-width: 700px) { .analysis-grid { grid-template-columns: 1fr; } }
     .analysis-block { background: var(--bg3); border-radius: 8px; padding: 0.75rem 1rem; border-left: 3px solid var(--accent); }
     .analysis-block.ai { border-left-color: var(--ai-accent); }
+    .analysis-block.nanpin { border-left-color: var(--nanpin-accent); }
     .analysis-block.alt { border-left-color: var(--accent2); }
     .analysis-block.alt-ai { border-left-color: var(--ai-accent2); }
+    .analysis-block.alt-nanpin { border-left-color: var(--nanpin-accent2); }
     .analysis-block.blue { border-left-color: #1e90ff; }
     .analysis-block.green { border-left-color: var(--accent3); }
     .analysis-label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
@@ -338,18 +357,22 @@
     }
     .flow-dot.start { background: var(--accent); color: white; }
     .flow-dot.start-ai { background: var(--ai-accent); color: white; }
+    .flow-dot.start-nanpin { background: var(--nanpin-accent); color: white; }
     .flow-dot.mid { background: var(--accent2); color: #1a1a1a; }
     .flow-dot.mid-ai { background: var(--ai-accent2); color: #1a1a1a; }
+    .flow-dot.mid-nanpin { background: var(--nanpin-accent2); color: #1a1a1a; }
     .flow-dot.turn { background: #1e90ff; color: white; }
     .flow-dot.end { background: var(--accent3); color: #0a0a0a; }
     .flow-content { flex: 1; }
     .flow-content strong { color: var(--accent2); font-size: 0.85rem; }
     .flow-content strong.ai { color: var(--ai-accent2); }
+    .flow-content strong.nanpin { color: var(--nanpin-accent2); }
     .flow-content p { font-size: 0.8rem; color: var(--muted); line-height: 1.5; margin-top: 0.1rem; }
     .sell-points { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.75rem; }
     .sell-point { font-size: 0.8rem; padding: 0.3rem 0.6rem; background: var(--bg3); border-radius: 6px; color: var(--ink); border: 1px solid var(--rule); }
     .sell-point::before { content: '✦ '; color: var(--accent); }
     .sell-point.ai::before { content: '✦ '; color: var(--ai-accent); }
+    .sell-point.nanpin::before { content: '✦ '; color: var(--nanpin-accent); }
     .analysis-toggle {
       background: transparent; color: var(--accent); border: 1px solid var(--accent);
       border-radius: 8px; padding: 0.4rem 1rem; font-family: var(--font);
@@ -357,14 +380,17 @@
       transition: all 0.2s;
     }
     .analysis-toggle.ai { color: var(--ai-accent); border-color: var(--ai-accent); }
+    .analysis-toggle.nanpin { color: var(--nanpin-accent); border-color: var(--nanpin-accent); }
     .analysis-toggle:hover { background: var(--accent); color: white; }
     .analysis-toggle.ai:hover { background: var(--ai-accent); color: white; }
+    .analysis-toggle.nanpin:hover { background: var(--nanpin-accent); color: white; }
 
     /* Tags */
     .tag-cloud { display: flex; flex-wrap: wrap; gap: 0.75rem; }
     .tag { background: var(--bg2); border: 1px solid var(--rule); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; color: var(--ink); }
     .tag.hot { border-color: var(--accent); color: var(--accent); }
     .tag.hot-ai { border-color: var(--ai-accent); color: var(--ai-accent); }
+    .tag.hot-nanpin { border-color: var(--nanpin-accent); color: var(--nanpin-accent); }
     .tag.new { border-color: var(--accent3); color: var(--accent3); }
 
     /* Chart */
@@ -377,8 +403,10 @@
       border-radius: 0 12px 12px 0; margin-bottom: 1rem;
     }
     .insight-box.ai { border-left-color: var(--ai-accent); }
+    .insight-box.nanpin { border-left-color: var(--nanpin-accent); }
     .insight-box h4 { color: var(--accent2); margin-bottom: 0.5rem; font-size: 1rem; }
     .insight-box.ai h4 { color: var(--ai-accent); }
+    .insight-box.nanpin h4 { color: var(--nanpin-accent); }
     .insight-box p { color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
 
     /* Footer */
@@ -405,6 +433,7 @@
       <div class="category-switcher">
         <button class="category-btn active drama" id="catDrama" onclick="switchCategory('drama')">🎬 真人短剧</button>
         <button class="category-btn ai" id="catAi" onclick="switchCategory('ai')">🤖 AI漫剧</button>
+        <button class="category-btn nanpin" id="catNanpin" onclick="switchCategory('nanpin')">👑 男频</button>
       </div>
 
       <!-- Sub Tab: 热播 / 飙升 -->
@@ -501,6 +530,9 @@
         if (category === 'ai') {
           return tab === 'rising' ? '-ai-rising' : '-ai';
         }
+        if (category === 'nanpin') {
+          return tab === 'rising' ? '-nanpin-rising' : '-nanpin';
+        }
         return tab === 'rising' ? '-rising' : '';
       }
 
@@ -508,11 +540,22 @@
         if (category === 'ai') {
           return tab === 'rising' ? './data/latest-ai-rising.json' : './data/latest-ai.json';
         }
+        if (category === 'nanpin') {
+          return tab === 'rising' ? './data/latest-nanpin-rising.json' : './data/latest-nanpin.json';
+        }
         return tab === 'rising' ? './data/latest-rising.json' : './data/latest.json';
+      }
+
+      function getCategoryMode() {
+        return window.currentCategory;
       }
 
       function isAiMode() {
         return window.currentCategory === 'ai';
+      }
+
+      function isNanpinMode() {
+        return window.currentCategory === 'nanpin';
       }
 
       // Single fetch with optional fallback
@@ -568,7 +611,8 @@
 
       function render(data) {
         var renderStart = performance.now();
-        var ai = isAiMode();
+        var cat = getCategoryMode();
+        var catClass = cat === 'drama' ? '' : cat;
 
         document.getElementById('loadingState').style.display = 'none';
         document.getElementById('contentState').style.display = 'block';
@@ -591,7 +635,7 @@
         }
 
         // Update section titles based on category
-        var catName = ai ? 'AI漫剧' : '短剧';
+        var catName = cat === 'ai' ? 'AI漫剧' : (cat === 'nanpin' ? '男频' : '短剧');
         var tabName = window.currentTab === 'rising' ? '飙升榜' : '热播榜';
         document.getElementById('overviewTitle').innerHTML = '<span class="icon">📊</span> 今日概览';
         document.getElementById('hotListTitle').innerHTML = '<span class="icon">' + (window.currentTab === 'rising' ? '📈' : '🔥') + '</span> ' + catName + tabName;
@@ -600,12 +644,14 @@
         document.getElementById('insightsTitle').innerHTML = '<span class="icon">💡</span> 行业洞察';
         document.getElementById('upcomingTitle').innerHTML = '<span class="icon">📅</span> 即将上线';
 
-        if (ai) {
+        document.getElementById('overviewTitle').classList.remove('ai-theme', 'nanpin-theme');
+        document.getElementById('hotListTitle').classList.remove('ai-theme', 'nanpin-theme');
+        if (cat === 'ai') {
           document.getElementById('overviewTitle').classList.add('ai-theme');
           document.getElementById('hotListTitle').classList.add('ai-theme');
-        } else {
-          document.getElementById('overviewTitle').classList.remove('ai-theme');
-          document.getElementById('hotListTitle').classList.remove('ai-theme');
+        } else if (cat === 'nanpin') {
+          document.getElementById('overviewTitle').classList.add('nanpin-theme');
+          document.getElementById('hotListTitle').classList.add('nanpin-theme');
         }
 
         // Build title->analysis map for correct matching
@@ -619,7 +665,7 @@
         // Overview
         var overviewHTML = '';
         data.overview.forEach(function(item) {
-          overviewHTML += '<div class="stat-card"><div class="stat-number ' + (ai ? 'ai' : '') + '">' + item.value + '</div><div class="stat-label">' + item.label + '</div></div>';
+          overviewHTML += '<div class="stat-card"><div class="stat-number ' + catClass + '">' + item.value + '</div><div class="stat-label">' + item.label + '</div></div>';
         });
         document.getElementById('overviewGrid').innerHTML = overviewHTML;
 
@@ -636,13 +682,13 @@
           var statusBadge = '';
           var itemStatus = '';
           if (item.new) {
-            statusBadge = '<span class="status-badge new-badge ' + (ai ? 'ai' : '') + '">新作</span>';
+            statusBadge = '<span class="status-badge new-badge ' + catClass + '">新作</span>';
             itemStatus = ' new-item';
           } else if (item.retain) {
-            statusBadge = '<span class="status-badge retain-badge ' + (ai ? 'ai' : '') + '">蝉联</span>';
+            statusBadge = '<span class="status-badge retain-badge ' + catClass + '">蝉联</span>';
             itemStatus = ' retain-item';
           } else if (item.stable) {
-            statusBadge = '<span class="status-badge stable-badge ' + (ai ? 'ai' : '') + '">稳榜</span>';
+            statusBadge = '<span class="status-badge stable-badge ' + catClass + '">稳榜</span>';
             itemStatus = ' stable-item';
           }
           var itemClasses = 'hot-item' + (ai ? ' ai' : '') + itemStatus;
@@ -658,7 +704,7 @@
                 '</div>' +
               '</div>' +
               '<div class="hot-heat">' +
-                '<div class="heat-value ' + (ai ? 'ai' : '') + '">' + item.heat + '</div>' +
+                '<div class="heat-value ' + catClass + '">' + item.heat + '</div>' +
                 '<div class="heat-label">' + item.heatLabel + '</div>' +
               '</div>' +
             '</div>';
@@ -686,7 +732,7 @@
                 listHTML += '<div class="flow-step">' +
                   '<div class="flow-dot ' + dotClass + '">' + step.phase + '</div>' +
                   '<div class="flow-content">' +
-                    '<strong class="' + (ai ? 'ai' : '') + '">' + step.title + '</strong>' +
+                    '<strong class="' + catClass + '">' + step.title + '</strong>' +
                     '<p>' + step.desc + '</p>' +
                   '</div>' +
                 '</div>';
@@ -697,14 +743,14 @@
             if (analysis.sellingPoints && analysis.sellingPoints.length > 0) {
               listHTML += '<div class="sell-points">';
               analysis.sellingPoints.forEach(function(sp) {
-                listHTML += '<span class="sell-point ' + (ai ? 'ai' : '') + '">' + sp + '</span>';
+                listHTML += '<span class="sell-point ' + catClass + '">' + sp + '</span>';
               });
               listHTML += '</div>';
             }
 
             listHTML += '</div>' +
               '<div style="padding:0 1.25rem 1rem;">' +
-                '<button class="analysis-toggle ' + (ai ? 'ai' : '') + '" onclick="toggleEmbed(\'' + bodyId + '\', this)">展开分析 ▼</button>' +
+                '<button class="analysis-toggle ' + catClass + '" onclick="toggleEmbed(\'' + bodyId + '\', this)">展开分析 ▼</button>' +
               '</div>';
           }
 
@@ -725,7 +771,7 @@
         if (data.insights) {
           var insightsHTML = '';
           data.insights.forEach(function(insight) {
-            insightsHTML += '<div class="insight-box ' + (ai ? 'ai' : '') + '"><h4>' + insight.title + '</h4><p>' + insight.content + '</p></div>';
+            insightsHTML += '<div class="insight-box ' + catClass + '"><h4>' + insight.title + '</h4><p>' + insight.content + '</p></div>';
           });
           document.getElementById('insights').innerHTML = insightsHTML;
         }
@@ -775,7 +821,8 @@
           console.warn('ECharts not loaded yet, chart skipped');
           return;
         }
-        var ai = isAiMode();
+        var cat = getCategoryMode();
+        var catClass = cat === 'drama' ? '' : cat;
         var chart = window.echarts.init(document.getElementById('chart-heat'), null, { renderer: 'svg' });
         var dramas = hotList.map(function(d) { return d.titleShort || d.title.substring(0, 6); });
         var heatData = hotList.map(function(d) {
@@ -830,6 +877,8 @@
         document.getElementById('catDrama').classList.toggle('drama', category === 'drama');
         document.getElementById('catAi').classList.toggle('active', category === 'ai');
         document.getElementById('catAi').classList.toggle('ai', category === 'ai');
+        document.getElementById('catNanpin').classList.toggle('active', category === 'nanpin');
+        document.getElementById('catNanpin').classList.toggle('nanpin', category === 'nanpin');
 
         // Update header border color
         var header = document.querySelector('.daily-header');
@@ -838,6 +887,11 @@
           document.querySelector('.daily-header h1').textContent = '红果AI漫剧热榜日报';
           document.querySelector('.daily-header .subtitle').textContent = 'AI生成漫剧每日热度排行追踪';
           document.title = '红果AI漫剧热榜日报';
+        } else if (category === 'nanpin') {
+          header.style.borderBottomColor = 'var(--nanpin-accent)';
+          document.querySelector('.daily-header h1').textContent = '红果男频热榜日报';
+          document.querySelector('.daily-header .subtitle').textContent = '男性向短剧每日热度排行追踪';
+          document.title = '红果男频热榜日报';
         } else {
           header.style.borderBottomColor = 'var(--accent)';
           document.querySelector('.daily-header h1').textContent = '红果短剧热榜日报';

@@ -1,2 +1,4 @@
 _temp/
 *.py
+sync.log
+auto_sync.ps1
