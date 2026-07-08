@@ -668,7 +668,8 @@
       function render(data) {
         var renderStart = performance.now();
         var cat = getCategoryMode();
-        var catClass = cat === 'drama' ? '' : cat;
+        var subCat = window.currentSubCategory || 'all';
+        var catClass = subCat !== 'all' ? subCat : (cat === 'drama' ? '' : cat);
 
         document.getElementById('loadingState').style.display = 'none';
         document.getElementById('contentState').style.display = 'block';
@@ -691,7 +692,6 @@
         }
 
         // Update section titles based on category
-        var subCat = window.currentSubCategory || 'all';
         var subCatName = subCat === 'nanpin' ? '男频' : (subCat === 'nvpin' ? '女频' : '');
         var catName = (cat === 'ai' ? 'AI漫剧' : '短剧') + (subCatName ? '-' + subCatName : '');
         var tabName = window.currentTab === 'rising' ? '飙升榜' : '热播榜';
@@ -702,14 +702,18 @@
         document.getElementById('insightsTitle').innerHTML = '<span class="icon">💡</span> 行业洞察';
         document.getElementById('upcomingTitle').innerHTML = '<span class="icon">📅</span> 即将上线';
 
-        document.getElementById('overviewTitle').classList.remove('ai-theme', 'nanpin-theme');
-        document.getElementById('hotListTitle').classList.remove('ai-theme', 'nanpin-theme');
-        if (cat === 'ai') {
+        document.getElementById('overviewTitle').classList.remove('ai-theme', 'nanpin-theme', 'nvpin-theme');
+        document.getElementById('hotListTitle').classList.remove('ai-theme', 'nanpin-theme', 'nvpin-theme');
+        var subCatForTheme = window.currentSubCategory || 'all';
+        if (cat === 'ai' && subCatForTheme === 'all') {
           document.getElementById('overviewTitle').classList.add('ai-theme');
           document.getElementById('hotListTitle').classList.add('ai-theme');
-        } else if (cat === 'nanpin') {
+        } else if (subCatForTheme === 'nanpin') {
           document.getElementById('overviewTitle').classList.add('nanpin-theme');
           document.getElementById('hotListTitle').classList.add('nanpin-theme');
+        } else if (subCatForTheme === 'nvpin') {
+          document.getElementById('overviewTitle').classList.add('nvpin-theme');
+          document.getElementById('hotListTitle').classList.add('nvpin-theme');
         }
 
         // Build title->analysis map for correct matching
@@ -880,15 +884,16 @@
           return;
         }
         var cat = getCategoryMode();
-        var catClass = cat === 'drama' ? '' : cat;
+        var subCat = window.currentSubCategory || 'all';
+        var catClass = subCat !== 'all' ? subCat : (cat === 'drama' ? '' : cat);
         var chart = window.echarts.init(document.getElementById('chart-heat'), null, { renderer: 'svg' });
         var dramas = hotList.map(function(d) { return d.titleShort || d.title.substring(0, 6); });
         var heatData = hotList.map(function(d) {
           var num = parseFloat(d.heat.replace(/[^0-9.]/g, ''));
           return num;
         });
-        var accentColor = cat === 'ai' ? '#1e90ff' : (cat === 'nanpin' ? '#b8860b' : (cat === 'nvpin' ? '#e84393' : '#ff4757'));
-        var accent2Color = cat === 'ai' ? '#00d2d3' : (cat === 'nanpin' ? '#ffd700' : (cat === 'nvpin' ? '#fd79a8' : '#ffa502'));
+        var accentColor = catClass === 'ai' ? '#1e90ff' : (catClass === 'nanpin' ? '#b8860b' : (catClass === 'nvpin' ? '#e84393' : '#ff4757'));
+        var accent2Color = catClass === 'ai' ? '#00d2d3' : (catClass === 'nanpin' ? '#ffd700' : (catClass === 'nvpin' ? '#fd79a8' : '#ffa502'));
         chart.setOption({
           animation: false,
           tooltip: {
