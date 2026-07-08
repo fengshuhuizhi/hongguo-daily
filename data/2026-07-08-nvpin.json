@@ -1,0 +1,197 @@
+{
+  "date": "2026-07-08",
+  "generatedAt": "2026-07-08 09:00:00",
+  "statsEndTime": "2026-07-07 24:00:00",
+  "todayTime": "2026-07-08",
+  "overview": [
+    {
+      "value": "7680万",
+      "label": "今日最高热度"
+    },
+    {
+      "value": "《甜宠总裁爱上我》",
+      "label": "冠军剧"
+    },
+    {
+      "value": "5:5",
+      "label": "古言/现言占比"
+    },
+    {
+      "value": "4部",
+      "label": "新面孔入榜"
+    }
+  ],
+  "hotList": [
+    {
+      "title": "甜宠总裁爱上我",
+      "titleShort": "甜宠总裁",
+      "cast": "苏婉儿、陆景深",
+      "genre": "甜宠、霸道总裁",
+      "heat": "7680万",
+      "heatLabel": "热度指数",
+      "source": "红果短剧",
+      "retain": true
+    },
+    {
+      "title": "重生之嫡女归来",
+      "titleShort": "嫡女归来",
+      "cast": "沈清欢、顾北辰",
+      "genre": "重生复仇、宅斗",
+      "heat": "7350万",
+      "heatLabel": "热度指数",
+      "source": "红果短剧",
+      "retain": true
+    },
+    {
+      "title": "先婚后爱：契约娇妻",
+      "titleShort": "契约娇妻",
+      "cast": "林小暖、霍霆深",
+      "genre": "先婚后爱、契约婚姻",
+      "heat": "7120万",
+      "heatLabel": "热度指数",
+      "source": "红果短剧",
+      "stable": true
+    },
+    {
+      "title": "穿越之我是贵妃",
+      "titleShort": "我是贵妃",
+      "cast": "楚嫣然、萧景琰",
+      "genre": "穿越宫斗、古言",
+      "heat": "6890万",
+      "heatLabel": "热度指数",
+      "source": "红果短剧",
+      "stable": true
+    },
+    {
+      "title": "团宠小娇妻",
+      "titleShort": "团宠娇妻",
+      "cast": "阮软、傅斯年",
+      "genre": "团宠、都市甜宠",
+      "heat": "6650万",
+      "heatLabel": "热度指数",
+      "source": "红果短剧",
+      "stable": true
+    },
+    {
+      "title": "仙尊的小徒弟",
+      "titleShort": "仙尊徒弟",
+      "cast": "云浅月、墨无尘",
+      "genre": "仙侠师徒、古言",
+      "heat": "6420万",
+      "heatLabel": "热度指数",
+      "source": "红果短剧",
+      "stable": true
+    },
+    {
+      "title": "废柴小姐逆袭记",
+      "titleShort": "废柴逆袭",
+      "cast": "苏浅浅、夜凌寒",
+      "genre": "逆袭升级、玄幻",
+      "heat": "6180万",
+      "heatLabel": "热度指数",
+      "source": "红果短剧",
+      "new": true
+    },
+    {
+      "title": "总裁的替身新娘",
+      "titleShort": "替身新娘",
+      "cast": "江念慈、顾霆骁",
+      "genre": "替身、虐恋",
+      "heat": "5950万",
+      "heatLabel": "热度指数",
+      "source": "红果短剧",
+      "new": true
+    },
+    {
+      "title": "我在古代开美容院",
+      "titleShort": "古代美容",
+      "cast": "苏锦瑟、慕容瑾",
+      "genre": "穿越经商、轻喜剧",
+      "heat": "5720万",
+      "heatLabel": "热度指数",
+      "source": "红果短剧",
+      "new": true
+    },
+    {
+      "title": "高冷校草爱上我",
+      "titleShort": "高冷校草",
+      "cast": "夏小冉、顾言希",
+      "genre": "校园青春、甜宠",
+      "heat": "5490万",
+      "heatLabel": "热度指数",
+      "source": "红果短剧",
+      "new": true
+    }
+  ],
+  "tags": [
+    {
+      "text": "甜宠",
+      "hot": true
+    },
+    {
+      "text": "重生复仇",
+      "hot": true
+    },
+    {
+      "text": "先婚后爱",
+      "hot": true
+    },
+    {
+      "text": "穿越宫斗",
+      "hot": false
+    },
+    {
+      "text": "团宠",
+      "hot": false
+    },
+    {
+      "text": "仙侠师徒",
+      "hot": false
+    },
+    {
+      "text": "虐恋",
+      "hot": false
+    },
+    {
+      "text": "校园青春",
+      "hot": false
+    }
+  ],
+  "insights": [
+    {
+      "title": "甜宠题材持续霸榜女频",
+      "content": "《甜宠总裁爱上我》以7680万热度登顶女频榜首，霸道总裁+甜宠套路依然是女频短剧的王牌组合。"
+    },
+    {
+      "title": "古言现言各占半壁江山",
+      "content": "本期女频TOP10中古言和现言题材各占5部，说明女频受众对两种风格接受度均衡。"
+    },
+    {
+      "title": "4部新作入榜，市场活力旺盛",
+      "content": "《废柴小姐逆袭记》《总裁的替身新娘》等4部新作风头正劲，女频短剧市场更新迭代迅速。"
+    },
+    {
+      "title": "校园青春题材崭露头角",
+      "content": "《高冷校草爱上我》等校园青春题材首次进入女频TOP10，年轻受众群体正在扩大。"
+    }
+  ],
+  "upcoming": [
+    {
+      "title": "宫斗之王",
+      "date": "07-09",
+      "cast": "待定",
+      "genre": "宫斗权谋",
+      "heat": "18万",
+      "source": "红果短剧"
+    },
+    {
+      "title": "总裁的隐婚妻",
+      "date": "07-10",
+      "cast": "待定",
+      "genre": "隐婚甜宠",
+      "heat": "15万",
+      "source": "红果短剧"
+    }
+  ],
+  "analysis": []
+}

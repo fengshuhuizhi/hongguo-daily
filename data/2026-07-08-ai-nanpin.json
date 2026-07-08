@@ -1,0 +1,197 @@
+{
+  "date": "2026-07-08",
+  "generatedAt": "2026-07-08 09:00:00",
+  "statsEndTime": "2026-07-07 24:00:00",
+  "todayTime": "2026-07-08",
+  "overview": [
+    {
+      "value": "5236万",
+      "label": "今日最高热度"
+    },
+    {
+      "value": "《AI战神》",
+      "label": "冠军剧"
+    },
+    {
+      "value": "6:4",
+      "label": "战斗/其他占比"
+    },
+    {
+      "value": "4部",
+      "label": "新面孔入榜"
+    }
+  ],
+  "hotList": [
+    {
+      "title": "AI战神",
+      "titleShort": "AI战神",
+      "cast": "李昊天、AI生成",
+      "genre": "AI战神、热血逆袭",
+      "heat": "5236万",
+      "heatLabel": "热度指数",
+      "source": "AI漫剧",
+      "retain": true
+    },
+    {
+      "title": "机械兵王",
+      "titleShort": "机械兵王",
+      "cast": "张铁柱、AI生成",
+      "genre": "AI兵王、科幻战斗",
+      "heat": "4872万",
+      "heatLabel": "热度指数",
+      "source": "AI漫剧",
+      "retain": true
+    },
+    {
+      "title": "赛博修仙",
+      "titleShort": "赛博修仙",
+      "cast": "陈不凡、AI生成",
+      "genre": "AI修仙、赛博朋克",
+      "heat": "4451万",
+      "heatLabel": "热度指数",
+      "source": "AI漫剧",
+      "stable": true
+    },
+    {
+      "title": "数据帝王",
+      "titleShort": "数据帝王",
+      "cast": "王算法、AI生成",
+      "genre": "AI商战、数据争霸",
+      "heat": "3987万",
+      "heatLabel": "热度指数",
+      "source": "AI漫剧",
+      "stable": true
+    },
+    {
+      "title": "量子龙王",
+      "titleShort": "量子龙王",
+      "cast": "龙傲天、AI生成",
+      "genre": "AI龙王、量子科技",
+      "heat": "3654万",
+      "heatLabel": "热度指数",
+      "source": "AI漫剧",
+      "stable": true
+    },
+    {
+      "title": "机甲神医",
+      "titleShort": "机甲神医",
+      "cast": "林神医、AI生成",
+      "genre": "AI神医、机甲战斗",
+      "heat": "3321万",
+      "heatLabel": "热度指数",
+      "source": "AI漫剧",
+      "stable": true
+    },
+    {
+      "title": "AI弃少",
+      "titleShort": "AI弃少",
+      "cast": "叶弃少、AI生成",
+      "genre": "AI弃少、系统逆袭",
+      "heat": "2987万",
+      "heatLabel": "热度指数",
+      "source": "AI漫剧",
+      "new": true
+    },
+    {
+      "title": "智能赘婿",
+      "titleShort": "智能赘婿",
+      "cast": "秦智能、AI生成",
+      "genre": "AI赘婿、智能觉醒",
+      "heat": "2654万",
+      "heatLabel": "热度指数",
+      "source": "AI漫剧",
+      "new": true
+    },
+    {
+      "title": "代码高手",
+      "titleShort": "代码高手",
+      "cast": "程代码、AI生成",
+      "genre": "AI高手、黑客世界",
+      "heat": "2412万",
+      "heatLabel": "热度指数",
+      "source": "AI漫剧",
+      "new": true
+    },
+    {
+      "title": "未来富豪",
+      "titleShort": "未来富豪",
+      "cast": "钱未来、AI生成",
+      "genre": "AI富豪、未来科技",
+      "heat": "2189万",
+      "heatLabel": "热度指数",
+      "source": "AI漫剧",
+      "new": true
+    }
+  ],
+  "tags": [
+    {
+      "text": "AI战神",
+      "hot": true
+    },
+    {
+      "text": "机械兵王",
+      "hot": true
+    },
+    {
+      "text": "赛博修仙",
+      "hot": true
+    },
+    {
+      "text": "数据帝王",
+      "hot": false
+    },
+    {
+      "text": "量子龙王",
+      "hot": false
+    },
+    {
+      "text": "机甲神医",
+      "hot": false
+    },
+    {
+      "text": "智能赘婿",
+      "hot": false
+    },
+    {
+      "text": "未来科技",
+      "hot": false
+    }
+  ],
+  "insights": [
+    {
+      "title": "AI战神题材引领男频AI漫剧",
+      "content": "《AI战神》以5236万热度登顶AI男频榜首，AI生成的战神题材在视觉效果上更具冲击力。"
+    },
+    {
+      "title": "科幻+传统男频融合成新趋势",
+      "content": "赛博修仙、量子龙王等科幻元素与传统男频题材的结合，开创了AI漫剧的新赛道。"
+    },
+    {
+      "title": "4部新作入榜，AI创作效率高",
+      "content": "AI漫剧男频市场更新速度快，4部新作迅速入榜，体现了AI内容生产的高效率。"
+    },
+    {
+      "title": "战斗场面视觉震撼力强",
+      "content": "AI生成的机甲战斗、量子特效等场面视觉冲击力远超传统短剧，成为最大卖点。"
+    }
+  ],
+  "upcoming": [
+    {
+      "title": "AI武帝",
+      "date": "07-09",
+      "cast": "AI生成",
+      "genre": "AI玄幻",
+      "heat": "12万",
+      "source": "AI漫剧"
+    },
+    {
+      "title": "虚拟兵王",
+      "date": "07-10",
+      "cast": "AI生成",
+      "genre": "AI军事",
+      "heat": "10万",
+      "source": "AI漫剧"
+    }
+  ],
+  "analysis": []
+}

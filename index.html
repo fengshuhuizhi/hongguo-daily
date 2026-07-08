@@ -32,6 +32,8 @@
       --ai-accent2: #00d2d3;
       --nanpin-accent: #b8860b;
       --nanpin-accent2: #ffd700;
+      --nvpin-accent: #e84393;
+      --nvpin-accent2: #fd79a8;
       --font: 'WorkSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
       --max: 960px;
     }
@@ -152,7 +154,36 @@
     .category-btn.active.nanpin { background: var(--nanpin-accent); color: white; border-color: var(--nanpin-accent); }
     .category-btn.nanpin:hover { border-color: var(--nanpin-accent); color: var(--nanpin-accent); }
 
-    /* Tab switcher (sub: 热播 / 飙升) */
+    /* Sub-category switcher (总榜 / 男频 / 女频) */
+    .sub-category-switcher {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+      position: relative;
+      z-index: 1;
+      justify-content: center;
+    }
+    .sub-category-btn {
+      background: var(--bg2);
+      color: var(--muted);
+      border: 1px solid var(--rule);
+      border-radius: 20px;
+      padding: 0.35rem 1rem;
+      font-family: var(--font);
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .sub-category-btn:hover { border-color: var(--accent2); color: var(--accent2); }
+    .sub-category-btn.active {
+      background: var(--accent2); color: #1a1a1a; border-color: var(--accent2);
+      font-weight: 700;
+    }
+    .sub-category-btn.active.ai {
+      background: var(--ai-accent2); color: #1a1a1a; border-color: var(--ai-accent2);
+    }
+
+    /* Tab switcher (热播 / 飙升) */
     .tab-switcher {
       display: flex;
       gap: 0.5rem;
@@ -199,6 +230,7 @@
     h2 .icon { font-size: 1.3rem; }
     h2.ai-theme { border-bottom-color: var(--ai-accent); }
     h2.nanpin-theme { border-bottom-color: var(--nanpin-accent); }
+    h2.nvpin-theme { border-bottom-color: var(--nvpin-accent); }
 
     /* Stats */
     .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
@@ -206,6 +238,7 @@
     .stat-number { font-size: 2rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem; }
     .stat-number.ai { color: var(--ai-accent); }
     .stat-number.nanpin { color: var(--nanpin-accent); }
+    .stat-number.nvpin { color: var(--nvpin-accent); }
     .stat-label { font-size: 0.9rem; color: var(--muted); }
 
     /* Hot list with embedded analysis */
@@ -218,6 +251,7 @@
     .hot-item:hover { border-color: var(--accent); }
     .hot-item.ai:hover { border-color: var(--ai-accent); }
     .hot-item.nanpin:hover { border-color: var(--nanpin-accent); }
+    .hot-item.nvpin:hover { border-color: var(--nvpin-accent); }
     .hot-main {
       padding: 1.25rem;
       display: flex; align-items: center; gap: 1rem;
@@ -311,11 +345,21 @@
     .hot-item.stable-item.nanpin {
       border-left-color: var(--nanpin-accent2);
     }
+    .hot-item.new-item.nvpin {
+      border-left-color: var(--nvpin-accent2);
+    }
+    .hot-item.retain-item.nvpin {
+      border-left-color: var(--nvpin-accent);
+    }
+    .hot-item.stable-item.nvpin {
+      border-left-color: var(--nvpin-accent2);
+    }
     .hot-meta { font-size: 0.85rem; color: var(--muted); display: flex; gap: 1rem; flex-wrap: wrap; }
     .hot-heat { text-align: right; flex-shrink: 0; }
     .heat-value { font-size: 1.3rem; font-weight: 700; color: var(--accent); }
     .heat-value.ai { color: var(--ai-accent); }
     .heat-value.nanpin { color: var(--nanpin-accent); }
+    .heat-value.nvpin { color: var(--nvpin-accent); }
     .heat-label { font-size: 0.75rem; color: var(--muted); }
 
     /* Embedded analysis */
@@ -341,9 +385,11 @@
     .analysis-block { background: var(--bg3); border-radius: 8px; padding: 0.75rem 1rem; border-left: 3px solid var(--accent); }
     .analysis-block.ai { border-left-color: var(--ai-accent); }
     .analysis-block.nanpin { border-left-color: var(--nanpin-accent); }
+    .analysis-block.nvpin { border-left-color: var(--nvpin-accent); }
     .analysis-block.alt { border-left-color: var(--accent2); }
     .analysis-block.alt-ai { border-left-color: var(--ai-accent2); }
     .analysis-block.alt-nanpin { border-left-color: var(--nanpin-accent2); }
+    .analysis-block.alt-nvpin { border-left-color: var(--nvpin-accent2); }
     .analysis-block.blue { border-left-color: #1e90ff; }
     .analysis-block.green { border-left-color: var(--accent3); }
     .analysis-label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
@@ -358,21 +404,25 @@
     .flow-dot.start { background: var(--accent); color: white; }
     .flow-dot.start-ai { background: var(--ai-accent); color: white; }
     .flow-dot.start-nanpin { background: var(--nanpin-accent); color: white; }
+    .flow-dot.start-nvpin { background: var(--nvpin-accent); color: white; }
     .flow-dot.mid { background: var(--accent2); color: #1a1a1a; }
     .flow-dot.mid-ai { background: var(--ai-accent2); color: #1a1a1a; }
     .flow-dot.mid-nanpin { background: var(--nanpin-accent2); color: #1a1a1a; }
+    .flow-dot.mid-nvpin { background: var(--nvpin-accent2); color: #1a1a1a; }
     .flow-dot.turn { background: #1e90ff; color: white; }
     .flow-dot.end { background: var(--accent3); color: #0a0a0a; }
     .flow-content { flex: 1; }
     .flow-content strong { color: var(--accent2); font-size: 0.85rem; }
     .flow-content strong.ai { color: var(--ai-accent2); }
     .flow-content strong.nanpin { color: var(--nanpin-accent2); }
+    .flow-content strong.nvpin { color: var(--nvpin-accent2); }
     .flow-content p { font-size: 0.8rem; color: var(--muted); line-height: 1.5; margin-top: 0.1rem; }
     .sell-points { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.75rem; }
     .sell-point { font-size: 0.8rem; padding: 0.3rem 0.6rem; background: var(--bg3); border-radius: 6px; color: var(--ink); border: 1px solid var(--rule); }
     .sell-point::before { content: '✦ '; color: var(--accent); }
     .sell-point.ai::before { content: '✦ '; color: var(--ai-accent); }
     .sell-point.nanpin::before { content: '✦ '; color: var(--nanpin-accent); }
+    .sell-point.nvpin::before { content: '✦ '; color: var(--nvpin-accent); }
     .analysis-toggle {
       background: transparent; color: var(--accent); border: 1px solid var(--accent);
       border-radius: 8px; padding: 0.4rem 1rem; font-family: var(--font);
@@ -381,9 +431,11 @@
     }
     .analysis-toggle.ai { color: var(--ai-accent); border-color: var(--ai-accent); }
     .analysis-toggle.nanpin { color: var(--nanpin-accent); border-color: var(--nanpin-accent); }
+    .analysis-toggle.nvpin { color: var(--nvpin-accent); border-color: var(--nvpin-accent); }
     .analysis-toggle:hover { background: var(--accent); color: white; }
     .analysis-toggle.ai:hover { background: var(--ai-accent); color: white; }
     .analysis-toggle.nanpin:hover { background: var(--nanpin-accent); color: white; }
+    .analysis-toggle.nvpin:hover { background: var(--nvpin-accent); color: white; }
 
     /* Tags */
     .tag-cloud { display: flex; flex-wrap: wrap; gap: 0.75rem; }
@@ -391,6 +443,7 @@
     .tag.hot { border-color: var(--accent); color: var(--accent); }
     .tag.hot-ai { border-color: var(--ai-accent); color: var(--ai-accent); }
     .tag.hot-nanpin { border-color: var(--nanpin-accent); color: var(--nanpin-accent); }
+    .tag.hot-nvpin { border-color: var(--nvpin-accent); color: var(--nvpin-accent); }
     .tag.new { border-color: var(--accent3); color: var(--accent3); }
 
     /* Chart */
@@ -404,9 +457,11 @@
     }
     .insight-box.ai { border-left-color: var(--ai-accent); }
     .insight-box.nanpin { border-left-color: var(--nanpin-accent); }
+    .insight-box.nvpin { border-left-color: var(--nvpin-accent); }
     .insight-box h4 { color: var(--accent2); margin-bottom: 0.5rem; font-size: 1rem; }
     .insight-box.ai h4 { color: var(--ai-accent); }
     .insight-box.nanpin h4 { color: var(--nanpin-accent); }
+    .insight-box.nvpin h4 { color: var(--nvpin-accent); }
     .insight-box p { color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
 
     /* Footer */
@@ -433,10 +488,16 @@
       <div class="category-switcher">
         <button class="category-btn active drama" id="catDrama" onclick="switchCategory('drama')">🎬 真人短剧</button>
         <button class="category-btn ai" id="catAi" onclick="switchCategory('ai')">🤖 AI漫剧</button>
-        <button class="category-btn nanpin" id="catNanpin" onclick="switchCategory('nanpin')">👑 男频</button>
       </div>
 
-      <!-- Sub Tab: 热播 / 飙升 -->
+      <!-- Sub Category: 总榜 / 男频 / 女频 -->
+      <div class="sub-category-switcher">
+        <button class="sub-category-btn active" id="subAll" onclick="switchSubCategory('all')">🏆 总榜</button>
+        <button class="sub-category-btn" id="subNanpin" onclick="switchSubCategory('nanpin')">👑 男频</button>
+        <button class="sub-category-btn" id="subNvpin" onclick="switchSubCategory('nvpin')">💃 女频</button>
+      </div>
+
+      <!-- Tab: 热播 / 飙升 -->
       <div class="tab-switcher">
         <button class="tab-btn active" id="tabHot" onclick="switchTab('hot')">🔥 热播榜</button>
         <button class="tab-btn" id="tabRising" onclick="switchTab('rising')">📈 飙升榜</button>
@@ -525,25 +586,22 @@
         return parts[0] + '年' + parts[1] + '月' + parts[2] + '日 ' + weekdays[d.getDay()];
       }
 
-      // Build file suffix based on category + tab
-      function getFileSuffix(category, tab) {
-        if (category === 'ai') {
-          return tab === 'rising' ? '-ai-rising' : '-ai';
-        }
-        if (category === 'nanpin') {
-          return tab === 'rising' ? '-nanpin-rising' : '-nanpin';
-        }
-        return tab === 'rising' ? '-rising' : '';
+      // Build file suffix based on category + subCategory + tab
+      // category: 'drama' | 'ai'
+      // subCategory: 'all' | 'nanpin' | 'nvpin'
+      // tab: 'hot' | 'rising'
+      function getFileSuffix(category, subCategory, tab) {
+        var catSuffix = category === 'ai' ? '-ai' : '';
+        var subSuffix = subCategory === 'all' ? '' : '-' + subCategory;
+        var tabSuffix = tab === 'rising' ? '-rising' : '';
+        return catSuffix + subSuffix + tabSuffix;
       }
 
-      function getFallbackFile(category, tab) {
-        if (category === 'ai') {
-          return tab === 'rising' ? './data/latest-ai-rising.json' : './data/latest-ai.json';
-        }
-        if (category === 'nanpin') {
-          return tab === 'rising' ? './data/latest-nanpin-rising.json' : './data/latest-nanpin.json';
-        }
-        return tab === 'rising' ? './data/latest-rising.json' : './data/latest.json';
+      function getFallbackFile(category, subCategory, tab) {
+        var catSuffix = category === 'ai' ? '-ai' : '';
+        var subSuffix = subCategory === 'all' ? '' : '-' + subCategory;
+        var tabSuffix = tab === 'rising' ? '-rising' : '';
+        return './data/latest' + catSuffix + subSuffix + tabSuffix + '.json';
       }
 
       function getCategoryMode() {
@@ -554,18 +612,16 @@
         return window.currentCategory === 'ai';
       }
 
-      function isNanpinMode() {
-        return window.currentCategory === 'nanpin';
-      }
 
       // Single fetch with optional fallback
-      function fetchData(dateStr, tab, category) {
+      function fetchData(dateStr, tab, category, subCategory) {
         category = category || window.currentCategory || 'drama';
+        subCategory = subCategory || window.currentSubCategory || 'all';
         tab = tab || window.currentTab || 'hot';
-        var suffix = getFileSuffix(category, tab);
+        var suffix = getFileSuffix(category, subCategory, tab);
         var ts = Date.now();
         var dataUrl = './data/' + dateStr + suffix + '.json?_t=' + ts;
-        var fallbackUrl = getFallbackFile(category, tab) + '?_t=' + ts;
+        var fallbackUrl = getFallbackFile(category, subCategory, tab) + '?_t=' + ts;
 
         document.getElementById('loadingState').style.display = 'block';
         document.getElementById('contentState').style.display = 'none';
@@ -606,7 +662,7 @@
       }
 
       function loadData() {
-        fetchData(getTodayStr(), window.currentTab, window.currentCategory);
+        fetchData(getTodayStr(), window.currentTab, window.currentCategory, window.currentSubCategory);
       }
 
       function render(data) {
@@ -635,7 +691,9 @@
         }
 
         // Update section titles based on category
-        var catName = cat === 'ai' ? 'AI漫剧' : (cat === 'nanpin' ? '男频' : '短剧');
+        var subCat = window.currentSubCategory || 'all';
+        var subCatName = subCat === 'nanpin' ? '男频' : (subCat === 'nvpin' ? '女频' : '');
+        var catName = (cat === 'ai' ? 'AI漫剧' : '短剧') + (subCatName ? '-' + subCatName : '');
         var tabName = window.currentTab === 'rising' ? '飙升榜' : '热播榜';
         document.getElementById('overviewTitle').innerHTML = '<span class="icon">📊</span> 今日概览';
         document.getElementById('hotListTitle').innerHTML = '<span class="icon">' + (window.currentTab === 'rising' ? '📈' : '🔥') + '</span> ' + catName + tabName;
@@ -691,7 +749,7 @@
             statusBadge = '<span class="status-badge stable-badge ' + catClass + '">稳榜</span>';
             itemStatus = ' stable-item';
           }
-          var itemClasses = 'hot-item' + (ai ? ' ai' : '') + itemStatus;
+          var itemClasses = 'hot-item' + (catClass ? ' ' + catClass : '') + itemStatus;
           listHTML += '<div class="' + itemClasses + '">' +
             '<div class="hot-main">' +
               '<div class="rank ' + rankClass + '">' + (idx + 1) + '</div>' +
@@ -716,7 +774,7 @@
             if (analysis.characters && analysis.characters.length > 0) {
               listHTML += '<div class="analysis-grid">';
               analysis.characters.forEach(function(ch, ci) {
-                var blockClass = ci === 0 ? 'analysis-block' + (ai ? ' ai' : '') : (ci === 1 ? 'analysis-block alt' + (ai ? '-ai' : '') : 'analysis-block blue');
+                var blockClass = ci === 0 ? 'analysis-block' + (catClass ? ' ' + catClass : '') : (ci === 1 ? 'analysis-block alt' + (catClass ? '-' + catClass : '') : 'analysis-block blue');
                 listHTML += '<div class="' + blockClass + '">' +
                   '<div class="analysis-label">' + ch.role + '</div>' +
                   '<div class="analysis-text">' + ch.desc + '</div>' +
@@ -728,7 +786,7 @@
             if (analysis.plotFlow && analysis.plotFlow.length > 0) {
               listHTML += '<div class="analysis-flow">';
               analysis.plotFlow.forEach(function(step) {
-                var dotClass = step.phase === '起' ? 'start' + (ai ? '-ai' : '') : (step.phase === '承' ? 'mid' + (ai ? '-ai' : '') : (step.phase === '转' ? 'turn' : 'end'));
+                var dotClass = step.phase === '起' ? 'start' + (catClass ? '-' + catClass : '') : (step.phase === '承' ? 'mid' + (catClass ? '-' + catClass : '') : (step.phase === '转' ? 'turn' : 'end'));
                 listHTML += '<div class="flow-step">' +
                   '<div class="flow-dot ' + dotClass + '">' + step.phase + '</div>' +
                   '<div class="flow-content">' +
@@ -762,7 +820,7 @@
         if (data.tags) {
           var tagsHTML = '';
           data.tags.forEach(function(tag) {
-            var cls = tag.hot ? 'tag hot' + (ai ? '-ai' : '') : (tag.new ? 'tag new' : 'tag');
+            var cls = tag.hot ? 'tag hot' + (catClass ? '-' + catClass : '') : (tag.new ? 'tag new' : 'tag');
             tagsHTML += '<span class="' + cls + '">' + tag.text + '</span>';
           });
           document.getElementById('tagCloud').innerHTML = tagsHTML;
@@ -829,8 +887,8 @@
           var num = parseFloat(d.heat.replace(/[^0-9.]/g, ''));
           return num;
         });
-        var accentColor = ai ? '#1e90ff' : '#ff4757';
-        var accent2Color = ai ? '#00d2d3' : '#ffa502';
+        var accentColor = cat === 'ai' ? '#1e90ff' : (cat === 'nanpin' ? '#b8860b' : (cat === 'nvpin' ? '#e84393' : '#ff4757'));
+        var accent2Color = cat === 'ai' ? '#00d2d3' : (cat === 'nanpin' ? '#ffd700' : (cat === 'nvpin' ? '#fd79a8' : '#ffa502'));
         chart.setOption({
           animation: false,
           tooltip: {
@@ -877,8 +935,12 @@
         document.getElementById('catDrama').classList.toggle('drama', category === 'drama');
         document.getElementById('catAi').classList.toggle('active', category === 'ai');
         document.getElementById('catAi').classList.toggle('ai', category === 'ai');
-        document.getElementById('catNanpin').classList.toggle('active', category === 'nanpin');
-        document.getElementById('catNanpin').classList.toggle('nanpin', category === 'nanpin');
+
+        // Update sub-category button AI styling
+        var subBtns = document.querySelectorAll('.sub-category-btn');
+        subBtns.forEach(function(btn) {
+          btn.classList.toggle('ai', category === 'ai');
+        });
 
         // Update header border color
         var header = document.querySelector('.daily-header');
@@ -887,11 +949,6 @@
           document.querySelector('.daily-header h1').textContent = '红果AI漫剧热榜日报';
           document.querySelector('.daily-header .subtitle').textContent = 'AI生成漫剧每日热度排行追踪';
           document.title = '红果AI漫剧热榜日报';
-        } else if (category === 'nanpin') {
-          header.style.borderBottomColor = 'var(--nanpin-accent)';
-          document.querySelector('.daily-header h1').textContent = '红果男频热榜日报';
-          document.querySelector('.daily-header .subtitle').textContent = '男性向短剧每日热度排行追踪';
-          document.title = '红果男频热榜日报';
         } else {
           header.style.borderBottomColor = 'var(--accent)';
           document.querySelector('.daily-header h1').textContent = '红果短剧热榜日报';
@@ -900,7 +957,19 @@
         }
 
         var dateStr = document.getElementById('datePicker').value || getTodayStr();
-        fetchData(dateStr, window.currentTab, category);
+        fetchData(dateStr, window.currentTab, category, window.currentSubCategory);
+      };
+
+      // Sub-category switching (all / nanpin / nvpin)
+      window.currentSubCategory = 'all';
+      window.switchSubCategory = function(subCategory) {
+        window.currentSubCategory = subCategory;
+        document.getElementById('subAll').classList.toggle('active', subCategory === 'all');
+        document.getElementById('subNanpin').classList.toggle('active', subCategory === 'nanpin');
+        document.getElementById('subNvpin').classList.toggle('active', subCategory === 'nvpin');
+
+        var dateStr = document.getElementById('datePicker').value || getTodayStr();
+        fetchData(dateStr, window.currentTab, window.currentCategory, subCategory);
       };
 
       // Tab switching (sub: hot / rising)
@@ -910,7 +979,7 @@
         document.getElementById('tabHot').classList.toggle('active', tab === 'hot');
         document.getElementById('tabRising').classList.toggle('active', tab === 'rising');
         var dateStr = document.getElementById('datePicker').value || getTodayStr();
-        fetchData(dateStr, tab, window.currentCategory);
+        fetchData(dateStr, tab, window.currentCategory, window.currentSubCategory);
       };
 
       // Date picker
@@ -924,14 +993,14 @@
         var selected = datePicker.value;
         if (!selected) return;
         currentDateStr = selected;
-        fetchData(selected, window.currentTab, window.currentCategory);
+        fetchData(selected, window.currentTab, window.currentCategory, window.currentSubCategory);
       });
 
       btnToday.addEventListener('click', function() {
         var today = getTodayStr();
         datePicker.value = today;
         currentDateStr = today;
-        fetchData(today, window.currentTab, window.currentCategory);
+        fetchData(today, window.currentTab, window.currentCategory, window.currentSubCategory);
       });
 
       loadData();

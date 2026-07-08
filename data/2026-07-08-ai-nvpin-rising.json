@@ -1,0 +1,197 @@
+{
+  "date": "2026-07-08",
+  "generatedAt": "2026-07-08 09:00:00",
+  "statsEndTime": "2026-07-07 24:00:00",
+  "todayTime": "2026-07-08",
+  "overview": [
+    {
+      "value": "+432%",
+      "label": "最高涨幅"
+    },
+    {
+      "value": "《AI甜心公主》",
+      "label": "飙升冠军"
+    },
+    {
+      "value": "AI女频",
+      "label": "主导类型"
+    },
+    {
+      "value": "4部",
+      "label": "新作入榜"
+    }
+  ],
+  "hotList": [
+    {
+      "title": "AI甜心公主",
+      "titleShort": "甜心公主",
+      "cast": "苏甜甜、AI生成",
+      "genre": "AI甜宠、童话公主",
+      "heat": "+432%",
+      "heatLabel": "热度飙升",
+      "source": "AI漫剧",
+      "retain": true
+    },
+    {
+      "title": "虚拟嫡女",
+      "titleShort": "虚拟嫡女",
+      "cast": "沈婉清、AI生成",
+      "genre": "AI重生、虚拟宅斗",
+      "heat": "+398%",
+      "heatLabel": "热度飙升",
+      "source": "AI漫剧",
+      "retain": true
+    },
+    {
+      "title": "数字契约妻",
+      "titleShort": "数字契约妻",
+      "cast": "林暖暖、AI生成",
+      "genre": "AI先婚后爱、数字世界",
+      "heat": "+356%",
+      "heatLabel": "热度飙升",
+      "source": "AI漫剧",
+      "stable": true
+    },
+    {
+      "title": "全息贵妃",
+      "titleShort": "全息贵妃",
+      "cast": "楚嫣然、AI生成",
+      "genre": "AI宫斗、全息穿越",
+      "heat": "+312%",
+      "heatLabel": "热度飙升",
+      "source": "AI漫剧",
+      "stable": true
+    },
+    {
+      "title": "AI团宠",
+      "titleShort": "AI团宠",
+      "cast": "阮软软、AI生成",
+      "genre": "AI团宠、虚拟养成",
+      "heat": "+287%",
+      "heatLabel": "热度飙升",
+      "source": "AI漫剧",
+      "stable": true
+    },
+    {
+      "title": "代码仙尊",
+      "titleShort": "代码仙尊",
+      "cast": "云浅浅、AI生成",
+      "genre": "AI仙侠、代码修仙",
+      "heat": "+245%",
+      "heatLabel": "热度飙升",
+      "source": "AI漫剧",
+      "stable": true
+    },
+    {
+      "title": "AI逆袭女王",
+      "titleShort": "逆袭女王",
+      "cast": "苏浅浅、AI生成",
+      "genre": "AI逆袭、女王养成",
+      "heat": "+198%",
+      "heatLabel": "热度飙升",
+      "source": "AI漫剧",
+      "new": true
+    },
+    {
+      "title": "虚拟替身",
+      "titleShort": "虚拟替身",
+      "cast": "江念念、AI生成",
+      "genre": "AI替身、虐恋",
+      "heat": "+167%",
+      "heatLabel": "热度飙升",
+      "source": "AI漫剧",
+      "new": true
+    },
+    {
+      "title": "智能美容院",
+      "titleShort": "智能美容",
+      "cast": "苏锦锦、AI生成",
+      "genre": "AI经商、智能美妆",
+      "heat": "+143%",
+      "heatLabel": "热度飙升",
+      "source": "AI漫剧",
+      "new": true
+    },
+    {
+      "title": "AI校草",
+      "titleShort": "AI校草",
+      "cast": "夏小暖、AI生成",
+      "genre": "AI校园、虚拟青春",
+      "heat": "+128%",
+      "heatLabel": "热度飙升",
+      "source": "AI漫剧",
+      "new": true
+    }
+  ],
+  "tags": [
+    {
+      "text": "AI甜宠",
+      "hot": true
+    },
+    {
+      "text": "AI重生",
+      "hot": true
+    },
+    {
+      "text": "AI宫斗",
+      "hot": true
+    },
+    {
+      "text": "AI仙侠",
+      "hot": false
+    },
+    {
+      "text": "AI逆袭",
+      "hot": false
+    },
+    {
+      "text": "AI校园",
+      "hot": false
+    },
+    {
+      "text": "AI经商",
+      "hot": false
+    },
+    {
+      "text": "AI替身",
+      "hot": false
+    }
+  ],
+  "insights": [
+    {
+      "title": "AI甜宠公主风引领女频AI漫剧",
+      "content": "《AI甜心公主》以4980万热度登顶AI女频榜首，AI生成的唯美画风和童话感深受女性观众喜爱。"
+    },
+    {
+      "title": "AI女频画风精致度超越传统",
+      "content": "AI漫剧在人物美颜、服装细节、场景梦幻感等方面展现出超越传统短剧的精致度。"
+    },
+    {
+      "title": "古言现言在AI女频均衡发展",
+      "content": "全息贵妃、数字契约妻等作品说明AI女频市场中古言和现言题材接受度相当。"
+    },
+    {
+      "title": "AI校园题材首次进入TOP10",
+      "content": "《AI校草》等校园青春题材进入AI女频TOP10，年轻女性受众群体正在扩大。"
+    }
+  ],
+  "upcoming": [
+    {
+      "title": "AI宫斗之王",
+      "date": "07-09",
+      "cast": "AI生成",
+      "genre": "AI宫斗",
+      "heat": "11万",
+      "source": "AI漫剧"
+    },
+    {
+      "title": "虚拟隐婚妻",
+      "date": "07-10",
+      "cast": "AI生成",
+      "genre": "AI隐婚",
+      "heat": "9万",
+      "source": "AI漫剧"
+    }
+  ],
+  "analysis": []
+}
